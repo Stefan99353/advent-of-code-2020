@@ -1,13 +1,13 @@
 use std::io;
 use std::str::FromStr;
 
-use anyhow::Result;
+use anyhow::{Error, Result};
 
 /// Reads input as lines, where every line is parsed to given type.
 pub fn input_iter<T, Input>(input: Input) -> impl Iterator<Item=Result<T>>
     where
         T: FromStr,
-        T::Err: Send + Sync + std::error::Error + 'static,
+        T::Err: Into<Error>,
         Input: io::BufRead,
 {
     input
@@ -17,10 +17,10 @@ pub fn input_iter<T, Input>(input: Input) -> impl Iterator<Item=Result<T>>
 
 /// Reads input as lines, where every line is parsed to given type.
 pub fn input_vec<T, Input>(input: Input) -> Result<Vec<T>>
-where
-T: FromStr,
-T::Err: Send + Sync + std::error::Error + 'static,
-Input: io::BufRead,
+    where
+        T: FromStr,
+        T::Err: Into<Error>,
+        Input: io::BufRead,
 {
     input_iter(input).collect()
 }
