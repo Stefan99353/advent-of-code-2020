@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "day_01"
+name = "day_02"
 version = "0.1.0"
 dependencies = [
  "anyhow",
