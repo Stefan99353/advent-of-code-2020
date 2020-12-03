@@ -1,2 +1,5 @@
-# advent-of-code-2020
-Repository to hold AoC2020 problems
+# Advent of Code 2020
+
+This repository holds my solutions in Rust to the problems found in [Advent of Code](https://adventofcode.com/).
+
+**Merry Christmas**
