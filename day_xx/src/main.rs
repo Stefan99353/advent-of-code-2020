@@ -1,11 +1,9 @@
 use std::fs::File;
 use std::io::BufReader;
 
-use anyhow::{Error, Result};
+use anyhow::Result;
 
 const DAY: &str = "xx";
-
-const SUM: u32 = 0;
 
 fn main() -> Result<()> {
     println!("-----  Advent of Code -- Day {}  -----", DAY);
@@ -23,12 +21,12 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-fn part1(input: &Vec<String>) -> Result<String> {
-    Ok(String::new())
+fn part1(input: &[String]) -> Result<u32> {
+    Ok(0)
 }
 
-fn part2(input: &Vec<String>) -> Result<String> {
-    Ok(String::new())
+fn part2(input: &[String]) -> Result<u32> {
+    Ok(0)
 }
 
 #[cfg(test)]
@@ -38,12 +36,12 @@ mod tests {
     #[test]
     fn test_part_1() {
         let input: Vec<String> = vec![];
-        assert_eq!(part1(&input).unwrap(), String::new());
+        assert_eq!(part1(&input).unwrap(), 0);
     }
 
     #[test]
     fn test_part_2() {
         let input: Vec<String> = vec![];
-        assert_eq!(part2(&input).unwrap(), String::new());
+        assert_eq!(part2(&input).unwrap(), 0);
     }
 }
