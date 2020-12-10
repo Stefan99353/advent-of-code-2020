@@ -1,5 +1,5 @@
 [package]
-name = "day_09"
+name = "day_10"
 version = "0.1.0"
 authors = ["Stefan Rupertsberger <s.rupertsberger@gmail.com>"]
 edition = "2018"
@@ -8,5 +8,4 @@ edition = "2018"
 
 [dependencies]
 anyhow = "1.0"
-itertools = "0.9"
 common = { path = "../common" }
