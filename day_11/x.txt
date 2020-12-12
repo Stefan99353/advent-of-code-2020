@@ -1,0 +1,10 @@
+indexes
+    .iter()
+    .map(|i| {
+        let seat: &Seat = self.seats.get(*i).unwrap();
+        match seat {
+            Seat::Occupied => 1,
+            _ => 0,
+        }
+    })
+    .sum()
